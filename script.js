@@ -35,14 +35,24 @@ document.addEventListener("DOMContentLoaded", function (e) {
 				if (resultObj.status === "ok") {
 					let autos = resultObj.data;
 
-					for (let propietario of propietarios) {
-						contenidoDOM.innerHTML += `<br><b>${propietario.nombre}</b>`
-						for (let auto of autos) {
+					// for (let propietario of propietarios) {
+					// 	contenidoDOM.innerHTML += `<br><b>${propietario.nombre}</b>`
+					// 	for (let auto of autos) {
+					// 		if (propietario.id === auto.idprop) {
+					// 			contenidoDOM.innerHTML += `<br><code>${auto.marca} ${auto.modelo} ${auto.anio}</code>`
+					// 		}
+					// 	}
+					// };
+
+					propietarios.forEach((propietario) => {
+						contenidoDOM.innerHTML += `<br><b>${propietario.nombre}</b>`;
+
+						autos.forEach((auto) => {
 							if (propietario.id === auto.idprop) {
 								contenidoDOM.innerHTML += `<br><code>${auto.marca} ${auto.modelo} ${auto.anio}</code>`
 							}
-						}
-					};
+						})
+					});
 				}
 			});
 		}
