@@ -35,6 +35,7 @@ document.addEventListener("DOMContentLoaded", function (e) {
 				if (resultObj.status === "ok") {
 					let autos = resultObj.data;
 
+					/* LOOP FOR OF */
 					// for (let propietario of propietarios) {
 					// 	contenidoDOM.innerHTML += `<br><b>${propietario.nombre}</b>`
 					// 	for (let auto of autos) {
@@ -44,6 +45,7 @@ document.addEventListener("DOMContentLoaded", function (e) {
 					// 	}
 					// };
 
+					/* LOOP FOREACH */
 					propietarios.forEach((propietario) => {
 						contenidoDOM.innerHTML += `<b>${propietario.nombre} ${propietario.apellido}</b>`;
 
