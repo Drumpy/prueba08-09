@@ -1,0 +1,13 @@
+	code,
+	b {
+		display: block;
+	}
+
+	b {
+		font-family: sans-serif;
+		margin: 15px 0 7px 0;
+	}
+
+	code {
+		padding-left: 6px;
+	}
