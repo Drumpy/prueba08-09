@@ -45,13 +45,13 @@ document.addEventListener("DOMContentLoaded", function (e) {
 					// };
 
 					propietarios.forEach((propietario) => {
-						contenidoDOM.innerHTML += `<br><b>${propietario.nombre}</b>`;
+						contenidoDOM.innerHTML += `<b>${propietario.nombre} ${propietario.apellido}</b>`;
 
 						autos.forEach((auto) => {
 							if (propietario.id === auto.idprop) {
-								contenidoDOM.innerHTML += `<br><code>${auto.marca} ${auto.modelo} ${auto.anio}</code>`
+								contenidoDOM.innerHTML += `<code>${auto.marca} ${auto.modelo} ${auto.anio}</code>`;
 							}
-						})
+						});
 					});
 				}
 			});
